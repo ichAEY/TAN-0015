@@ -66,6 +66,38 @@ jobs:
             fi
           done
           if [ -z "$selected" ]; then
+            echo "::group::Issued TANEM HTTPS domains"
+            curl -fsSL 'https://crt.sh/?q=%25.tanem.ru&output=json'               | jq -r '.[].name_value'               | tr '\r' '\n'               | sed 's/^\*\.//'               | grep -E '(^|\.)tanem\.ru
+          echo "Using custom domain: $selected"
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            gh api --method PUT "repos/${{ github.repository }}/pages" -f build_type=workflow -f cname="$selected" >/dev/null
+          else
+            gh api --method POST "repos/${{ github.repository }}/pages" -f build_type=workflow >/dev/null
+            gh api --method PUT "repos/${{ github.repository }}/pages" -f cname="$selected" >/dev/null
+          fi
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
+      - if: steps.pages-check.outputs.enabled == 'true'
+        uses: actions/configure-pages@v5
+      - if: steps.pages-check.outputs.enabled != 'true'
+        run: echo "::notice::Quality checks passed. Enable Settings → Pages → GitHub Actions to publish the preview."
+      - if: steps.pages-check.outputs.enabled == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: out
+
+  deploy:
+    if: github.event_name != 'pull_request' && needs.build.outputs.pages-ready == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+               | sort -u || true
+            echo "::endgroup::"
             echo "::error::No configured TANEM domain found in: $CUSTOM_DOMAIN_CANDIDATES"
             exit 1
           fi
