@@ -49,11 +49,24 @@ export default {
   "contacts": {
     "phoneDisplay": "+7 (924) 277-55-79",
     "phoneHref": "tel:+79242775579",
-    "messenger": {
-      "type": "whatsapp",
-      "label": "WhatsApp",
-      "url": "https://wa.me/79242775579"
-    }
+    "channels": [
+      {
+        "type": "whatsapp",
+        "label": "WhatsApp",
+        "url": "https://wa.me/79242775579"
+      },
+      {
+        "type": "telegram",
+        "label": "Telegram",
+        "url": "https://t.me/+79242775579"
+      },
+      {
+        "type": "vk",
+        "label": "VK",
+        "url": "https://vk.ru/tatyana.lange"
+      }
+    ],
+    "messenger": null
   },
   "links": {
     "bookingUrl": "https://dikidi.net/835530",
