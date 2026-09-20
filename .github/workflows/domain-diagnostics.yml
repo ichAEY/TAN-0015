@@ -12,5 +12,5 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl -fsSL 'https://crt.sh/?q=%25.tanem.ru&output=json' > /tmp/tanem-certs.json
-          jq -r '.[].name_value' /tmp/tanem-certs.json             | tr '\r' '\n'             | sed 's/^\*\.//'             | grep -E '(^|\.)tanem\.ru$'             | sort -u
+          curl -fsSL 'https://api.certspotter.com/v1/issuances?domain=tanem.ru&include_subdomains=true&expand=dns_names' > /tmp/tanem-certs.json
+          jq -r '.[] | .dns_names[]?' /tmp/tanem-certs.json             | sed 's/^\*\.//'             | grep -E '(^|\.)tanem\.ru$'             | sort -u
