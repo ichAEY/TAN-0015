@@ -1,4 +1,4 @@
-# TANEM — Shablon For Only Masters
+# TANEM — TAN-0015
 
 Единый production-шаблон TANEM для индивидуальных мастеров. Не используется для салонов.
 
