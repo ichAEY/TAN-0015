@@ -104,34 +104,141 @@ export default {
   "services": {
     "groups": [
       {
+        "id": "extensions",
+        "label": "Наращивание ногтей",
+        "services": [
+          {
+            "name": "Наращивание ногтей. Длина от 3 до 4.",
+            "price": "4 800 ₽",
+            "time": "3 ч 15 м",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Наращивание ногтей. Камуфляж. Длина до 3.",
+            "price": "4 000 ₽",
+            "time": "3 ч",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Наращивание ногтей. Типсы. Временно нет услуги!!!",
+            "price": "от 4 000 ₽",
+            "time": "3 ч",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Наращивание ногтей. Френч. Длина до 3.",
+            "price": "4 500 ₽",
+            "time": "3 ч 15 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
         "id": "manicure",
         "label": "Маникюр",
         "services": [
           {
-            "name": "Маникюр",
-            "price": "",
-            "time": "",
+            "name": "Маникюр аппаратный",
+            "price": "1 600 ₽",
+            "time": "45 м",
             "description": "",
             "url": ""
           },
           {
-            "name": "Маникюр с укреплением и покрытием",
-            "price": "",
-            "time": "",
+            "name": "Маникюр комбинированный",
+            "price": "1 000 ₽",
+            "time": "35 м",
             "description": "",
             "url": ""
           },
+          {
+            "name": "Маникюр бразильский",
+            "price": "1 400 ₽",
+            "time": "35 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "gradient",
+        "label": "Градиент",
+        "services": [
+          {
+            "name": "Градиент гель лаками. Цена за 1 ноготь. Зависит от сложности сочетания оттенков.",
+            "price": "от 80 ₽",
+            "time": "1 ч",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Градиент гелями, полигелями. Цена за 1 ноготь.",
+            "price": "от 80 ₽",
+            "time": "1 ч",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "extension-correction",
+        "label": "Коррекция наращенных ногтей",
+        "services": [
+          {
+            "name": "Коррекция наращенных ногтей",
+            "price": "от 3 500 ₽",
+            "time": "2 ч 20 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "manicure-coating",
+        "label": "Маникюр с покрытием",
+        "services": [
+          {
+            "name": "Маникюр с укреплением и покрытием. Длина до 2. Комплекс.",
+            "price": "3 300 ₽",
+            "time": "1 ч 50 м",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Маникюр с укреплением и покрытием. Длина от 2 до 3. Комплекс.",
+            "price": "3 600 ₽",
+            "time": "2 ч 15 м",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Маникюр с укреплением и покрытием. Длина от 3 до 4. Комплекс. Временно нет услуги!!!",
+            "price": "4 000 ₽",
+            "time": "2 ч 40 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "mens-manicure",
+        "label": "Мужской маникюр",
+        "services": [
           {
             "name": "Мужской маникюр",
-            "price": "",
-            "time": "",
+            "price": "2 000 ₽",
+            "time": "35 м",
             "description": "",
             "url": ""
           },
           {
-            "name": "Ламинирование ногтей",
-            "price": "",
-            "time": "",
+            "name": "Мужской маникюр с покрытием",
+            "price": "3 500 ₽",
+            "time": "1 ч 40 м",
             "description": "",
             "url": ""
           }
@@ -142,71 +249,129 @@ export default {
         "label": "Педикюр",
         "services": [
           {
-            "name": "Педикюр",
-            "price": "",
-            "time": "",
+            "name": "Педикюр Голден Трейс. Golden Trace. Обработка стоп и пальцев без покрытия гель-лак. Временно нет услуги!!!",
+            "price": "2 600 ₽",
+            "time": "1 ч",
             "description": "",
             "url": ""
           },
           {
-            "name": "Мужской педикюр",
-            "price": "",
-            "time": "",
+            "name": "Педикюр дисковый. Без покрытия .",
+            "price": "2 800 ₽",
+            "time": "1 ч",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Педикюр. В процедуру входит обработка пальцев с покрытием гель-лак.",
+            "price": "2 500 ₽",
+            "time": "1 ч 10 м",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Педикюр. В процедуру входит только гигиеническая обработка пальцев. Без покрытия.",
+            "price": "1 700 ₽",
+            "time": "30 м",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Педикюр. Дисковый. Полная обработка стопы, пальцев. Покрытие ногтей гель -лак.",
+            "price": "3 000 ₽",
+            "time": "1 ч 50 м",
+            "description": "",
+            "url": ""
+          },
+          {
+            "name": "Педикюр. Полный Голден Трейс.Golden Trace. С покрытием ногтей гель лак. Временно нет услуги!!!",
+            "price": "3 300 ₽",
+            "time": "2 ч",
             "description": "",
             "url": ""
           }
         ]
       },
       {
-        "id": "extension",
-        "label": "Наращивание и дизайн",
+        "id": "lifting",
+        "label": "Поднятие клюющих",
         "services": [
           {
-            "name": "Наращивание ногтей",
-            "price": "",
-            "time": "",
+            "name": "Поднятие клюющих",
+            "price": "от 1 ₽",
+            "time": "10 м",
             "description": "",
             "url": ""
-          },
+          }
+        ]
+      },
+      {
+        "id": "repair",
+        "label": "Ремонт ногтей",
+        "services": [
           {
-            "name": "Коррекция наращивания",
-            "price": "",
-            "time": "",
+            "name": "Ремонт 1 ногтя 0 рублей при выполнении какого-либо комплекса. 150 рублей если более 1 ногтя.",
+            "price": "1 ₽",
+            "time": "10 м",
             "description": "",
             "url": ""
-          },
+          }
+        ]
+      },
+      {
+        "id": "complex-cases",
+        "label": "Сложные случаи в покрытии ногтей.",
+        "services": [
+          {
+            "name": "«У меня ничего не держится!» Это для ВАС!",
+            "price": "4 000 ₽",
+            "time": "2 ч 15 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "removal",
+        "label": "Снятие покрытия",
+        "services": [
+          {
+            "name": "Снятие покрытия",
+            "price": "600 ₽",
+            "time": "15 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "strengthening",
+        "label": "Укрепление ногтей",
+        "services": [
           {
             "name": "Укрепление ногтей",
-            "price": "",
-            "time": "",
+            "price": "1 ₽",
+            "time": "10 м",
+            "description": "",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "french",
+        "label": "Французский маникюр",
+        "services": [
+          {
+            "name": "Французский маникюр. Френч.",
+            "price": "400 ₽",
+            "time": "15 м",
             "description": "",
             "url": ""
           },
           {
-            "name": "Ремонт ногтя",
-            "price": "",
-            "time": "",
-            "description": "",
-            "url": ""
-          },
-          {
-            "name": "Дизайн ногтей",
-            "price": "",
-            "time": "",
-            "description": "",
-            "url": ""
-          },
-          {
-            "name": "Градиент",
-            "price": "",
-            "time": "",
-            "description": "",
-            "url": ""
-          },
-          {
-            "name": "Френч",
-            "price": "",
-            "time": "",
+            "name": "Френч двойной, цветной, обратный, фантазийный. Лунки, руффиан.",
+            "price": "от 600 ₽",
+            "time": "15 м",
             "description": "",
             "url": ""
           }
@@ -214,7 +379,7 @@ export default {
       }
     ]
   },
-  "i18n": {
+    "i18n": {
     "localLocale": "ru",
     "locales": [
       {
@@ -276,6 +441,51 @@ export default {
         "Дизайн ногтей": "Nail design",
         "Градиент": "Gradient",
         "Френч": "French manicure",
+        "Наращивание ногтей. Длина от 3 до 4.": "Nail extensions. Length 3 to 4.",
+        "Наращивание ногтей. Камуфляж. Длина до 3.": "Nail extensions. Camouflage. Length up to 3.",
+        "Наращивание ногтей. Типсы. Временно нет услуги!!!": "Nail extensions. Tips. Service temporarily unavailable!!!",
+        "Наращивание ногтей. Френч. Длина до 3.": "Nail extensions. French. Length up to 3.",
+        "Маникюр аппаратный": "Hardware manicure",
+        "Маникюр комбинированный": "Combined manicure",
+        "Маникюр бразильский": "Brazilian manicure",
+        "Градиент гель лаками. Цена за 1 ноготь. Зависит от сложности сочетания оттенков.": "Gel polish gradient. Price per nail. Depends on the complexity of the color combination.",
+        "Градиент гелями, полигелями. Цена за 1 ноготь.": "Gel/poly-gel gradient. Price per nail.",
+        "Коррекция наращенных ногтей": "Nail extension correction",
+        "Маникюр с покрытием": "Manicure with coating",
+        "Маникюр с укреплением и покрытием. Длина до 2. Комплекс.": "Manicure with strengthening and coating. Length up to 2. Full service.",
+        "Маникюр с укреплением и покрытием. Длина от 2 до 3. Комплекс.": "Manicure with strengthening and coating. Length 2 to 3. Full service.",
+        "Маникюр с укреплением и покрытием. Длина от 3 до 4. Комплекс. Временно нет услуги!!!": "Manicure with strengthening and coating. Length 3 to 4. Full service. Service temporarily unavailable!!!",
+        "Мужской маникюр с покрытием": "Men's manicure with coating",
+        "Педикюр Голден Трейс. Golden Trace. Обработка стоп и пальцев без покрытия гель-лак. Временно нет услуги!!!": "Golden Trace pedicure. Foot and toe treatment without gel polish. Service temporarily unavailable!!!",
+        "Педикюр дисковый. Без покрытия .": "Disc pedicure. No coating.",
+        "Педикюр. В процедуру входит обработка пальцев с покрытием гель-лак.": "Pedicure. Includes toe treatment with gel polish.",
+        "Педикюр. В процедуру входит только гигиеническая обработка пальцев. Без покрытия.": "Pedicure. Includes hygienic toe treatment only. No coating.",
+        "Педикюр. Дисковый. Полная обработка стопы, пальцев. Покрытие ногтей гель -лак.": "Disc pedicure. Full foot and toe treatment. Gel polish coating.",
+        "Педикюр. Полный Голден Трейс.Golden Trace. С покрытием ногтей гель лак. Временно нет услуги!!!": "Full Golden Trace pedicure with gel polish. Service temporarily unavailable!!!",
+        "Поднятие клюющих": "Correction of downward-growing nails",
+        "Ремонт ногтей": "Nail repair",
+        "Ремонт 1 ногтя 0 рублей при выполнении какого-либо комплекса. 150 рублей если более 1 ногтя.": "Repair of 1 nail is free with any full service. 150 rubles if more than 1 nail.",
+        "Сложные случаи в покрытии ногтей.": "Complex nail coating cases",
+        "«У меня ничего не держится!» Это для ВАС!": "“Nothing stays on my nails!” This is for YOU!",
+        "Снятие покрытия": "Coating removal",
+        "Французский маникюр": "French manicure",
+        "Французский маникюр. Френч.": "French manicure. French.",
+        "Френч двойной, цветной, обратный, фантазийный. Лунки, руффиан.": "Double, colored, reverse and fantasy French. Half-moons, ruffian.",
+        "3 ч 15 м": "3 h 15 min",
+        "3 ч": "3 h",
+        "45 м": "45 min",
+        "35 м": "35 min",
+        "1 ч": "1 h",
+        "2 ч 20 м": "2 h 20 min",
+        "1 ч 50 м": "1 h 50 min",
+        "2 ч 15 м": "2 h 15 min",
+        "2 ч 40 м": "2 h 40 min",
+        "1 ч 40 м": "1 h 40 min",
+        "1 ч 10 м": "1 h 10 min",
+        "30 м": "30 min",
+        "2 ч": "2 h",
+        "10 м": "10 min",
+        "15 м": "15 min",
         "Я Татьяна — эксперт по маникюру и педикюру.": "I am Tatyana — a manicure and pedicure expert."
       }
     }
