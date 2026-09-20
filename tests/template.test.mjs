@@ -15,8 +15,17 @@ const html = fs.readFileSync("out/index.html", "utf8");
 const css = fs.readFileSync("app/template.css", "utf8");
 const component = fs.readFileSync("app/master-template.tsx", "utf8");
 
-test("static export builds from the empty template", () => {
+test("static export builds from the production client site", () => {
   assert.match(html, /site-root/);
+});
+
+test("production client data is populated", () => {
+  assert.ok(String(site.master.name || "").trim());
+  assert.ok(String(site.location.city || "").trim());
+  assert.ok(String(site.contacts.phoneDisplay || "").trim());
+  assert.ok(Array.isArray(site.reviews));
+  assert.ok(site.reviews.length <= 9);
+  assert.ok(Array.isArray(site.images.gallery));
 });
 
 test("the clean template uses one canonical stylesheet and runtime", () => {
@@ -24,10 +33,14 @@ test("the clean template uses one canonical stylesheet and runtime", () => {
   assert.ok(fs.existsSync("public/template-runtime.js"));
 });
 
-test("portfolio and full gallery remain structural without client photos", () => {
+test("portfolio and full gallery remain structural with or without client photos", () => {
   assert.match(html, /id="mobile-portfolio"/);
   assert.match(html, /Смотреть все работы/);
-  assert.match(html, /mct-work-placeholder/);
+  if (site.images.gallery.length === 0) {
+    assert.match(html, /mct-work-placeholder/);
+  } else {
+    assert.ok(html.includes(site.images.gallery[0].src));
+  }
   assert.doesNotMatch(html, /disabled=""[^>]*Смотреть все работы/);
 });
 
